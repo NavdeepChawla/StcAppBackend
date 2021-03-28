@@ -1,5 +1,4 @@
-FROM python:3.6
+FROM ubuntu:18.04
 COPY . /app
-WORKDIR /app
-RUN pip install -r /requirements.txt
-CMD["app.py"]
+RUN make /app
+CMD python /app/app.py
